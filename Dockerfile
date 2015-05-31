@@ -1,14 +1,12 @@
 FROM node
 
 # Build app
-WORKDIR /shang
-ENV NODEPATH /shang
-ADD . /shang
-RUN git clone "https://github.com/q2234037172/tryDao.git" \
-	&& cd tryDao \
-	&& npm install \
-	&& cd dist \
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
 
+RUN npm install
 
 EXPOSE 80
-CMD ["/shang/ngMusic/dist"]
+
+CMD [ "node","dist/server.js"]
