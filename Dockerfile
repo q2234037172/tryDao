@@ -5,6 +5,6 @@ RUN npm install
 
 EXPOSE 1340
 
-CMD ["/shang/dist"]
+CMD ["/dist"]
 
 
