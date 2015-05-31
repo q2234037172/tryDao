@@ -20,7 +20,7 @@ RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x
 # Build app
 WORKDIR /shang
 RUN git clone "https://github.com/q2234037172/tryDao.git" \
-	&& cd ngMusic \
+	&& cd tryDao \
 	&& npm install \
 	&& cd dist \
 
